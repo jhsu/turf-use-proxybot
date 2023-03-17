@@ -1,14 +1,14 @@
 import { Suspense, useMemo, useRef, useState } from 'react'
 import './App.css'
 
-import { useProxy } from 'turf-use-proxybot'
+import { useProxyBot } from 'turf-use-proxybot'
 import { ethers } from 'ethers'
 import React from 'react';
 
 function Vault({ address }: { address: string}) {
 
 	const provider = useMemo(() => new ethers.InfuraProvider('homestead', import.meta.env.VITE_INFURA_API_KEY), [])
-  const vaultAddress = useProxy(address, provider)
+  const vaultAddress = useProxyBot(address, provider)
   // const vaultAddress = 123
 
   return <div>

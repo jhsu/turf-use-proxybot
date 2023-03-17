@@ -1,6 +1,6 @@
 {
   "name": "turf-use-proxybot",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "author": {
     "name": "Joe Hsu",
     "email": "jhsu.x1@gmail.com",
@@ -45,5 +45,10 @@
   },
   "dependencies": {
     "suspend-react": "^0.0.9"
-  }
+  },
+  "keywords": [
+    "ethereum",
+    "react",
+    "turfnft"
+  ]
 }

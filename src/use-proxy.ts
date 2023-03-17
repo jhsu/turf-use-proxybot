@@ -14,8 +14,8 @@ async function getVaultAddress(hotWalletAddress: string, signer?: ethers.Contrac
 		return vaultAddress
 }
 
-export function useProxy(hotWalletAddress: string, signer?: ethers.ContractRunner) {
+export function useProxyBot(hotWalletAddress: string, signer?: ethers.ContractRunner) {
 	const data = suspend((address) => getVaultAddress(address, signer), [hotWalletAddress])
 	return data
 }
-export default useProxy
+export default useProxyBot
