@@ -37,9 +37,6 @@
   ],
   "references": [
     {
-      "path": "./tsconfig.node.json"
-    },
-    {
       "path": "./examples/geographer/tsconfig.json"
     }
   ]
