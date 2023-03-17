@@ -11,13 +11,14 @@ import ethers from 'ethers'
 import { useProxy } from 'turf-use-proxybot'
 
 const Vault = () => {
-	const provider = ethers.getDefaultProvider()
+  const provider = ethers.getDefaultProvider()
 
-	// Provide a signer/provider to call the contract
-	const vaultAddress = useProxy('0x9236e0ad628f4ee207ce050b44986af1ce19697f', provider)
+  // Provide a signer/provider to call the contract
+  const vaultAddress = useProxy(
+    '0x9236e0ad628f4ee207ce050b44986af1ce19697f',
+    provider
+  )
 
-	return <div>
-		Vault address if present: {vaultAddress}
-	</div>
+  return <div>Vault address if present: {vaultAddress}</div>
 }
 ```
