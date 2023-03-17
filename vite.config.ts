@@ -5,12 +5,12 @@ import typescript from '@rollup/plugin-typescript'
 export default defineConfig({
   plugins: [react()],
   build: {
-    target: "modules",
+    target: 'modules',
     minify: false,
     lib: {
       entry: 'src/index.ts',
       formats: ['es', 'cjs'],
-      fileName: 'use-proxy',
+      fileName: 'index',
     },
     rollupOptions: {
       external: ['react', 'ethers', 'suspend-react'],
@@ -20,10 +20,7 @@ export default defineConfig({
           ethers: 'ethers',
         },
       },
-      plugins: [
-        typescript()
-      ]
+      plugins: [typescript()],
     },
-
-  }
+  },
 })

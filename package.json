@@ -1,27 +1,32 @@
 {
   "name": "turf-use-proxybot",
-  "version": "0.0.2",
+  "version": "0.0.4",
   "author": {
     "name": "Joe Hsu",
     "email": "jhsu.x1@gmail.com",
     "url": "https://github.com/jhsu"
   },
+  "homepage": "https://github.com/jhsu/turf-use-proxybot#readme",
+  "license": "MIT",
   "type": "module",
   "files": [
     "dist"
   ],
-  "main": "dist/use-proxy.js",
   "types": "dist/index.d.ts",
+  "main": "dist/index.cjs",
+  "module": "dist/index.js",
+  "sideEffects": false,
   "exports": {
     ".": {
-      "import": "./dist/use-proxy.js",
-      "require": "./dist/use-proxy.cjs",
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs",
       "types": "./dist/index.d.ts"
     }
   },
   "scripts": {
     "dev": "vite",
-    "build": "tsc && vite build",
+    "build": "rollup -c",
+    "postbuild": "tsc --emitDeclarationOnly",
     "preview": "vite preview"
   },
   "peerDependencies": {
@@ -31,15 +36,18 @@
   },
   "devDependencies": {
     "@rollup/plugin-commonjs": "^24.0.1",
+    "@rollup/plugin-json": "^6.0.0",
     "@rollup/plugin-node-resolve": "^15.0.1",
     "@rollup/plugin-typescript": "^11.0.0",
     "@types/react": "^18.0.28",
     "@types/react-dom": "^18.0.11",
     "@vitejs/plugin-react": "^3.1.0",
     "ethers": "^6.1.0",
+    "prettier": "^2.8.4",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "rollup": "^3.19.1",
+    "rollup-plugin-peer-deps-external": "^2.2.4",
     "typescript": "^4.9.3",
     "vite": "^4.2.0"
   },
@@ -50,5 +58,10 @@
     "ethereum",
     "react",
     "turfnft"
-  ]
+  ],
+  "prettier": {
+    "tabWidth": 2,
+    "singleQuote": true,
+    "semi": false
+  }
 }
