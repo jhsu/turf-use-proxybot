@@ -1,0 +1,12 @@
+{
+	"extends": "../../tsconfig.json",
+	"compilerOptions": {
+		"composite": true,
+	},
+	"files": [
+		"src/main.tsx"
+	],
+	"include": [
+		"src"
+	]
+}

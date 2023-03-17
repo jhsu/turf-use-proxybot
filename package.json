@@ -1,0 +1,49 @@
+{
+  "name": "turf-use-proxybot",
+  "version": "0.0.1",
+  "author": {
+    "name": "Joe Hsu",
+    "email": "jhsu.x1@gmail.com",
+    "url": "https://github.com/jhsu"
+  },
+  "type": "module",
+  "files": [
+    "dist"
+  ],
+  "main": "dist/use-proxy.js",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/use-proxy.js",
+      "require": "./dist/use-proxy.cjs",
+      "types": "./dist/index.d.ts"
+    }
+  },
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview"
+  },
+  "peerDependencies": {
+    "ethers": ">=6.0",
+    "react": ">=17.0",
+    "react-dom": ">=17.0"
+  },
+  "devDependencies": {
+    "@rollup/plugin-commonjs": "^24.0.1",
+    "@rollup/plugin-node-resolve": "^15.0.1",
+    "@rollup/plugin-typescript": "^11.0.0",
+    "@types/react": "^18.0.28",
+    "@types/react-dom": "^18.0.11",
+    "@vitejs/plugin-react": "^3.1.0",
+    "ethers": "^6.1.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "rollup": "^3.19.1",
+    "typescript": "^4.9.3",
+    "vite": "^4.2.0"
+  },
+  "dependencies": {
+    "suspend-react": "^0.0.9"
+  }
+}
